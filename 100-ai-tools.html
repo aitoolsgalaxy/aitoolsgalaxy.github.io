@@ -2,263 +2,857 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="google-site-verification" content="google089c0bc8bb4c9321" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>100 Best AI Tools in 2026</title>
+<title>AI Tools Galaxy</title>
 
 <style>
+:root{
+  --bg1:#09081a;
+  --bg2:#11193a;
+  --bg3:#1b0f3f;
+  --bg4:#0e3b52;
+  --text:#ffffff;
+  --muted:rgba(255,255,255,0.78);
+  --glass:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.12);
+  --pink:#ff4fd8;
+  --blue:#42c8ff;
+  --purple:#8b5dff;
+  --green:#59f0c2;
+  --yellow:#ffd166;
+  --shadow:0 20px 50px rgba(0,0,0,0.35);
+}
+
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#08121f,#102235,#132c42);
-color:white;
-line-height:1.6;
+  font-family:Arial,sans-serif;
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,79,216,0.25), transparent 25%),
+    radial-gradient(circle at 85% 15%, rgba(66,200,255,0.22), transparent 24%),
+    radial-gradient(circle at 75% 75%, rgba(89,240,194,0.14), transparent 20%),
+    radial-gradient(circle at 30% 85%, rgba(139,93,255,0.22), transparent 22%),
+    linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3),var(--bg4));
+  background-attachment: fixed;
 }
 
-nav{
-display:flex;
-justify-content:center;
-gap:20px;
-padding:16px;
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
-position:sticky;
-top:0;
-z-index:100;
-flex-wrap:wrap;
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.65), transparent),
+    radial-gradient(2px 2px at 140px 80px, rgba(255,255,255,0.55), transparent),
+    radial-gradient(1.5px 1.5px at 260px 120px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(2px 2px at 420px 40px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1.5px 1.5px at 560px 160px, rgba(255,255,255,0.45), transparent),
+    radial-gradient(2px 2px at 760px 90px, rgba(255,255,255,0.55), transparent),
+    radial-gradient(1.5px 1.5px at 920px 40px, rgba(255,255,255,0.45), transparent);
+  background-size: 1000px 220px;
+  opacity:.55;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
+a{
+  text-decoration:none;
+  color:inherit;
 }
 
-header{
-text-align:center;
-padding:80px 20px 40px;
-max-width:1000px;
-margin:auto;
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
 }
 
-header h1{
-font-size:52px;
-margin-bottom:18px;
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(16px);
+  background:rgba(10,10,30,0.45);
+  border-bottom:1px solid var(--border);
 }
 
-header p{
-font-size:20px;
-max-width:760px;
-margin:auto;
-color:rgba(255,255,255,0.85);
+.nav-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:16px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
-.section{
-max-width:1200px;
-margin:auto;
-padding:20px 20px 60px;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:bold;
+  font-size:20px;
+  letter-spacing:.3px;
 }
 
-.table-wrap{
-overflow-x:auto;
-background:white;
-border-radius:16px;
-box-shadow:0 16px 35px rgba(0,0,0,0.22);
+.brand-badge{
+  width:40px;
+  height:40px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue));
+  box-shadow:0 12px 30px rgba(139,93,255,0.45);
 }
 
-table{
-width:100%;
-border-collapse:collapse;
-background:white;
-color:#111827;
+.nav-links{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-th,td{
-padding:14px;
-border-bottom:1px solid #e5e7eb;
-text-align:left;
+.nav-links a{
+  color:rgba(255,255,255,0.9);
+  font-size:14px;
+  font-weight:bold;
+  transition:.2s ease;
 }
 
-th{
-background:#2563eb;
-color:white;
-position:sticky;
-top:0;
+.nav-links a:hover{
+  color:#fff;
+  text-shadow:0 0 16px rgba(66,200,255,0.95);
 }
 
-tr:nth-child(even){
-background:#f8fafc;
+.hero{
+  position:relative;
+  padding:105px 20px 70px;
+}
+
+.planet{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(8px);
+  opacity:.75;
+  pointer-events:none;
+}
+
+.planet.one{
+  width:210px;
+  height:210px;
+  left:-40px;
+  top:80px;
+  background:radial-gradient(circle at 35% 35%, #ff8ef0, #8b5dff 60%, transparent 70%);
+}
+
+.planet.two{
+  width:260px;
+  height:260px;
+  right:-60px;
+  top:20px;
+  background:radial-gradient(circle at 40% 40%, #7be7ff, #2962ff 60%, transparent 70%);
+}
+
+.planet.three{
+  width:180px;
+  height:180px;
+  right:14%;
+  bottom:0;
+  background:radial-gradient(circle at 40% 40%, #7fffd4, #00b894 60%, transparent 72%);
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+}
+
+.hero-tag{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid var(--border);
+  color:#f8d9ff;
+  font-size:14px;
+  margin-bottom:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.22);
+}
+
+.hero h1{
+  font-size:72px;
+  line-height:1;
+  letter-spacing:-2px;
+  max-width:980px;
+  margin:0 auto 18px;
+  text-shadow:
+    0 0 25px rgba(255,79,216,0.18),
+    0 0 35px rgba(66,200,255,0.12);
+}
+
+.hero p{
+  font-size:20px;
+  max-width:780px;
+  margin:0 auto 30px;
+  color:var(--muted);
+}
+
+.hero-buttons{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.button,
+.button-secondary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 22px;
+  border-radius:14px;
+  font-weight:bold;
+  transition:.2s ease;
 }
 
 .button{
-display:inline-block;
-padding:8px 12px;
-border-radius:8px;
-background:#2563eb;
-color:white;
-text-decoration:none;
-font-weight:bold;
+  background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue));
+  color:white;
+  box-shadow:0 15px 35px rgba(139,93,255,0.35);
 }
 
-footer{
-text-align:center;
-padding:36px 20px;
-background:rgba(0,0,0,0.28);
-margin-top:40px;
-border-top:1px solid rgba(255,255,255,0.08);
+.button-secondary{
+  background:rgba(255,255,255,0.08);
+  border:1px solid var(--border);
+  color:white;
+}
+
+.button:hover,
+.button-secondary:hover{
+  transform:translateY(-2px) scale(1.02);
+}
+
+.hero-stats{
+  margin:34px auto 0;
+  max-width:1000px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.hero-stat{
+  background:rgba(255,255,255,0.08);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:22px;
+  box-shadow:var(--shadow);
+}
+
+.hero-stat h3{
+  font-size:34px;
+  margin-bottom:4px;
+  background:linear-gradient(90deg,#fff,#8fe7ff,#ffb5ef);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-stat p{
+  margin:0;
+  font-size:14px;
+  color:rgba(255,255,255,0.82);
+}
+
+.section{
+  padding:70px 0;
+}
+
+.section-title{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:14px;
+  letter-spacing:-1px;
+}
+
+.section-subtitle{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 34px;
+  color:var(--muted);
+  font-size:18px;
+}
+
+.search-panel{
+  max-width:900px;
+  margin:0 auto;
+  padding:28px;
+  border-radius:28px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.search-box{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.search-box input{
+  flex:1;
+  min-width:240px;
+  padding:16px 18px;
+  border:none;
+  border-radius:16px;
+  font-size:16px;
+  outline:none;
+  background:white;
+  color:#111827;
+}
+
+.search-box button{
+  padding:16px 22px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue));
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+#searchResults{
+  text-align:center;
+  margin-top:18px;
+  color:#ffe6ff;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+.card{
+  position:relative;
+  overflow:hidden;
+  padding:24px;
+  border-radius:26px;
+  color:#111827;
+  background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,250,255,0.96));
+  box-shadow:0 22px 50px rgba(0,0,0,0.28);
+  transition:.24s ease;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:6px;
+  background:linear-gradient(90deg,var(--pink),var(--purple),var(--blue),var(--green));
+}
+
+.card:hover{
+  transform:translateY(-8px) rotate(-.2deg);
+}
+
+.card-icon{
+  width:60px;
+  height:60px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  margin-bottom:16px;
+  background:linear-gradient(135deg,#fff0fb,#e0f6ff,#e9fff7);
+  box-shadow:0 12px 30px rgba(139,93,255,0.14);
+}
+
+.card-tag{
+  display:inline-block;
+  margin-bottom:14px;
+  padding:6px 11px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:bold;
+  color:#334155;
+  background:linear-gradient(135deg,#ffd6f6,#e0d7ff,#d8f4ff);
+}
+
+.card h3{
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#4b5563;
+  margin-bottom:16px;
+}
+
+.card .button{
+  padding:11px 16px;
+  border-radius:12px;
+  box-shadow:none;
+}
+
+.tools-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+
+.tool-box{
+  padding:20px;
+  border-radius:22px;
+  background:linear-gradient(135deg,rgba(255,255,255,0.11),rgba(255,255,255,0.06));
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.tool-box h3{
+  font-size:20px;
+  margin-bottom:8px;
+  color:#ffffff;
+}
+
+.tool-box p{
+  color:rgba(255,255,255,0.84);
+  font-size:15px;
+}
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+}
+
+.category-card{
+  padding:22px;
+  border-radius:24px;
+  background:linear-gradient(135deg,rgba(255,255,255,0.10),rgba(255,255,255,0.06));
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  transition:.22s ease;
+}
+
+.category-card:hover{
+  transform:translateY(-6px);
+  background:linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.08));
+}
+
+.category-card h3{
+  font-size:22px;
+  margin-bottom:8px;
+}
+
+.category-card p{
+  color:rgba(255,255,255,0.84);
+  margin-bottom:14px;
+}
+
+.highlight-wrap{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:24px;
+}
+
+.highlight-left{
+  padding:32px;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at top left, rgba(255,79,216,0.20), transparent 30%),
+    linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.06));
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.highlight-left h3{
+  font-size:36px;
+  margin-bottom:12px;
+}
+
+.highlight-left p{
+  color:rgba(255,255,255,0.84);
+  margin-bottom:18px;
+}
+
+.highlight-right{
+  padding:24px;
+  border-radius:28px;
+  color:#111827;
+  background:linear-gradient(180deg,#fffdfd,#f3fbff);
+  box-shadow:0 22px 50px rgba(0,0,0,0.28);
+}
+
+.highlight-mini{
+  display:inline-block;
+  margin-bottom:12px;
+  padding:6px 11px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:bold;
+  color:#1e3a8a;
+  background:linear-gradient(135deg,#dcfce7,#dbeafe,#ffe3f7);
+}
+
+.highlight-right h3{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.highlight-right p{
+  color:#4b5563;
+  margin-bottom:16px;
+}
+
+.faq{
+  max-width:920px;
+  margin:auto;
+}
+
+.faq-item{
+  padding:22px;
+  border-radius:24px;
+  background:linear-gradient(135deg,rgba(255,255,255,0.10),rgba(255,255,255,0.06));
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  margin-bottom:16px;
+}
+
+.faq-item h3{
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.faq-item p{
+  color:rgba(255,255,255,0.84);
+}
+
+.footer{
+  margin-top:30px;
+  padding:40px 20px;
+  text-align:center;
+  background:rgba(6,8,22,0.45);
+  border-top:1px solid var(--border);
+}
+
+.footer p{
+  color:rgba(255,255,255,0.88);
+}
+
+.small{
+  font-size:14px;
+  opacity:.8;
+  margin-top:8px;
+}
+
+@media (max-width:980px){
+  .hero h1{
+    font-size:50px;
+  }
+  .hero-stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .highlight-wrap{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:640px){
+  .hero h1{
+    font-size:38px;
+  }
+  .hero p{
+    font-size:18px;
+  }
+  .hero-stats{
+    grid-template-columns:1fr;
+  }
+  .section-title{
+    font-size:32px;
+  }
 }
 </style>
 </head>
-
 <body>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="100-ai-tools.html">100 AI Tools</a>
-<a href="ai-tools-list.html">Tools List</a>
-<a href="ai-writing-tools.html">Writing</a>
-<a href="ai-image-tools.html">Images</a>
-<a href="ai-productivity-tools.html">Productivity</a>
-<a href="ai-tools-for-students.html">Students</a>
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-badge">🌌</div>
+      <span>AI Tools Galaxy</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="100-ai-tools.html">100 AI Tools</a>
+      <a href="ai-tools-list.html">Tools List</a>
+      <a href="ai-writing-tools.html">Writing</a>
+      <a href="ai-image-tools.html">Images</a>
+      <a href="ai-productivity-tools.html">Productivity</a>
+      <a href="ai-tools-for-students.html">Students</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
 </nav>
 
-<header>
-<h1>100 Best AI Tools in 2026</h1>
-<p>Explore a large list of popular AI tools for writing, studying, productivity, coding, design, video, research, and automation.</p>
-</header>
+<section class="hero">
+  <div class="planet one"></div>
+  <div class="planet two"></div>
+  <div class="planet three"></div>
 
-<section class="section">
-<div class="table-wrap">
-<table>
-<tr>
-<th>#</th>
-<th>Tool</th>
-<th>Category</th>
-<th>Free Plan</th>
-<th>Visit</th>
-</tr>
+  <div class="hero-inner">
+    <div class="hero-tag">✨ Cosmic AI directory for creators, students, and dreamers</div>
+    <h1>The Most Colorful Corner of the AI Universe</h1>
+    <p>Explore stunning AI tools for writing, design, productivity, study, and creativity — all inside a bold galaxy-inspired directory built to stand out.</p>
 
-<tr><td>1</td><td>ChatGPT</td><td>Writing / Study</td><td>Yes</td><td><a class="button" href="https://chat.openai.com" target="_blank">Visit</a></td></tr>
-<tr><td>2</td><td>Grammarly</td><td>Writing</td><td>Yes</td><td><a class="button" href="https://www.grammarly.com" target="_blank">Visit</a></td></tr>
-<tr><td>3</td><td>Notion AI</td><td>Productivity</td><td>Yes</td><td><a class="button" href="https://www.notion.so" target="_blank">Visit</a></td></tr>
-<tr><td>4</td><td>Canva AI</td><td>Design / Images</td><td>Yes</td><td><a class="button" href="https://www.canva.com" target="_blank">Visit</a></td></tr>
-<tr><td>5</td><td>Midjourney</td><td>Images</td><td>No</td><td><a class="button" href="https://www.midjourney.com" target="_blank">Visit</a></td></tr>
-<tr><td>6</td><td>DALL·E</td><td>Images</td><td>Yes</td><td><a class="button" href="https://openai.com" target="_blank">Visit</a></td></tr>
-<tr><td>7</td><td>Quizlet</td><td>Students</td><td>Yes</td><td><a class="button" href="https://quizlet.com" target="_blank">Visit</a></td></tr>
-<tr><td>8</td><td>Duolingo</td><td>Students</td><td>Yes</td><td><a class="button" href="https://www.duolingo.com" target="_blank">Visit</a></td></tr>
-<tr><td>9</td><td>Otter AI</td><td>Productivity</td><td>Yes</td><td><a class="button" href="https://otter.ai" target="_blank">Visit</a></td></tr>
-<tr><td>10</td><td>Zapier</td><td>Automation</td><td>Yes</td><td><a class="button" href="https://zapier.com" target="_blank">Visit</a></td></tr>
+    <div class="hero-buttons">
+      <a class="button" href="100-ai-tools.html">Explore 100 AI Tools</a>
+      <a class="button-secondary" href="#featured">Discover Top Picks</a>
+    </div>
 
-<tr><td>11</td><td>Jasper</td><td>Writing</td><td>No</td><td><a class="button" href="https://www.jasper.ai" target="_blank">Visit</a></td></tr>
-<tr><td>12</td><td>Writesonic</td><td>Writing</td><td>Yes</td><td><a class="button" href="https://writesonic.com" target="_blank">Visit</a></td></tr>
-<tr><td>13</td><td>Copy.ai</td><td>Writing</td><td>Yes</td><td><a class="button" href="https://www.copy.ai" target="_blank">Visit</a></td></tr>
-<tr><td>14</td><td>QuillBot</td><td>Writing</td><td>Yes</td><td><a class="button" href="https://quillbot.com" target="_blank">Visit</a></td></tr>
-<tr><td>15</td><td>Rytr</td><td>Writing</td><td>Yes</td><td><a class="button" href="https://rytr.me" target="_blank">Visit</a></td></tr>
-<tr><td>16</td><td>Sudowrite</td><td>Writing</td><td>No</td><td><a class="button" href="https://www.sudowrite.com" target="_blank">Visit</a></td></tr>
-<tr><td>17</td><td>HyperWrite</td><td>Writing</td><td>Yes</td><td><a class="button" href="https://hyperwriteai.com" target="_blank">Visit</a></td></tr>
-<tr><td>18</td><td>Perplexity</td><td>Research</td><td>Yes</td><td><a class="button" href="https://www.perplexity.ai" target="_blank">Visit</a></td></tr>
-<tr><td>19</td><td>NotebookLM</td><td>Study / Research</td><td>Yes</td><td><a class="button" href="https://notebooklm.google.com" target="_blank">Visit</a></td></tr>
-<tr><td>20</td><td>Google Gemini</td><td>General AI</td><td>Yes</td><td><a class="button" href="https://gemini.google.com" target="_blank">Visit</a></td></tr>
-
-<tr><td>21</td><td>Khanmigo</td><td>Students</td><td>No</td><td><a class="button" href="https://www.khanacademy.org" target="_blank">Visit</a></td></tr>
-<tr><td>22</td><td>Study Fetch</td><td>Students</td><td>Yes</td><td><a class="button" href="https://www.studyfetch.com" target="_blank">Visit</a></td></tr>
-<tr><td>23</td><td>Knowt</td><td>Students</td><td>Yes</td><td><a class="button" href="https://knowt.com" target="_blank">Visit</a></td></tr>
-<tr><td>24</td><td>Socratic</td><td>Students</td><td>Yes</td><td><a class="button" href="https://socratic.org" target="_blank">Visit</a></td></tr>
-<tr><td>25</td><td>Wolfram Alpha</td><td>Math / Study</td><td>Yes</td><td><a class="button" href="https://www.wolframalpha.com" target="_blank">Visit</a></td></tr>
-<tr><td>26</td><td>Stable Diffusion</td><td>Images</td><td>Yes</td><td><a class="button" href="https://stability.ai" target="_blank">Visit</a></td></tr>
-<tr><td>27</td><td>Leonardo AI</td><td>Images</td><td>Yes</td><td><a class="button" href="https://leonardo.ai" target="_blank">Visit</a></td></tr>
-<tr><td>28</td><td>Adobe Firefly</td><td>Images / Design</td><td>Yes</td><td><a class="button" href="https://www.adobe.com" target="_blank">Visit</a></td></tr>
-<tr><td>29</td><td>Looka</td><td>Branding</td><td>No</td><td><a class="button" href="https://looka.com" target="_blank">Visit</a></td></tr>
-<tr><td>30</td><td>Clipdrop</td><td>Images</td><td>Yes</td><td><a class="button" href="https://clipdrop.co" target="_blank">Visit</a></td></tr>
-
-<tr><td>31</td><td>Ideogram</td><td>Images</td><td>Yes</td><td><a class="button" href="https://ideogram.ai" target="_blank">Visit</a></td></tr>
-<tr><td>32</td><td>Runway</td><td>Video / Images</td><td>Yes</td><td><a class="button" href="https://runwayml.com" target="_blank">Visit</a></td></tr>
-<tr><td>33</td><td>Motion</td><td>Productivity</td><td>No</td><td><a class="button" href="https://www.usemotion.com" target="_blank">Visit</a></td></tr>
-<tr><td>34</td><td>Taskade</td><td>Productivity</td><td>Yes</td><td><a class="button" href="https://www.taskade.com" target="_blank">Visit</a></td></tr>
-<tr><td>35</td><td>Tome</td><td>Presentations</td><td>Yes</td><td><a class="button" href="https://tome.app" target="_blank">Visit</a></td></tr>
-<tr><td>36</td><td>Fireflies.ai</td><td>Meetings</td><td>Yes</td><td><a class="button" href="https://fireflies.ai" target="_blank">Visit</a></td></tr>
-<tr><td>37</td><td>Reclaim AI</td><td>Productivity</td><td>Yes</td><td><a class="button" href="https://reclaim.ai" target="_blank">Visit</a></td></tr>
-<tr><td>38</td><td>Mem AI</td><td>Notes</td><td>Yes</td><td><a class="button" href="https://mem.ai" target="_blank">Visit</a></td></tr>
-<tr><td>39</td><td>GitHub Copilot</td><td>Coding</td><td>No</td><td><a class="button" href="https://github.com/features/copilot" target="_blank">Visit</a></td></tr>
-<tr><td>40</td><td>Cursor</td><td>Coding</td><td>Yes</td><td><a class="button" href="https://cursor.com" target="_blank">Visit</a></td></tr>
-
-<tr><td>41</td><td>Codeium</td><td>Coding</td><td>Yes</td><td><a class="button" href="https://codeium.com" target="_blank">Visit</a></td></tr>
-<tr><td>42</td><td>Amazon Q</td><td>Coding / Cloud</td><td>Yes</td><td><a class="button" href="https://aws.amazon.com/q/" target="_blank">Visit</a></td></tr>
-<tr><td>43</td><td>Tabnine</td><td>Coding</td><td>Yes</td><td><a class="button" href="https://www.tabnine.com" target="_blank">Visit</a></td></tr>
-<tr><td>44</td><td>Replit AI</td><td>Coding</td><td>Yes</td><td><a class="button" href="https://replit.com" target="_blank">Visit</a></td></tr>
-<tr><td>45</td><td>Sourcegraph Cody</td><td>Coding</td><td>Yes</td><td><a class="button" href="https://sourcegraph.com/cody" target="_blank">Visit</a></td></tr>
-<tr><td>46</td><td>Bolt</td><td>Apps</td><td>Yes</td><td><a class="button" href="https://bolt.new" target="_blank">Visit</a></td></tr>
-<tr><td>47</td><td>Blackbox AI</td><td>Coding</td><td>Yes</td><td><a class="button" href="https://www.blackbox.ai" target="_blank">Visit</a></td></tr>
-<tr><td>48</td><td>v0</td><td>UI / Coding</td><td>Yes</td><td><a class="button" href="https://v0.dev" target="_blank">Visit</a></td></tr>
-<tr><td>49</td><td>Pika</td><td>Video</td><td>Yes</td><td><a class="button" href="https://pika.art" target="_blank">Visit</a></td></tr>
-<tr><td>50</td><td>Synthesia</td><td>Video</td><td>No</td><td><a class="button" href="https://www.synthesia.io" target="_blank">Visit</a></td></tr>
-
-<tr><td>51</td><td>Descript</td><td>Video / Audio</td><td>Yes</td><td><a class="button" href="https://www.descript.com" target="_blank">Visit</a></td></tr>
-<tr><td>52</td><td>Veed</td><td>Video</td><td>Yes</td><td><a class="button" href="https://www.veed.io" target="_blank">Visit</a></td></tr>
-<tr><td>53</td><td>Opus Clip</td><td>Video</td><td>Yes</td><td><a class="button" href="https://www.opus.pro" target="_blank">Visit</a></td></tr>
-<tr><td>54</td><td>InVideo AI</td><td>Video</td><td>Yes</td><td><a class="button" href="https://invideo.io" target="_blank">Visit</a></td></tr>
-<tr><td>55</td><td>HeyGen</td><td>Video</td><td>Yes</td><td><a class="button" href="https://www.heygen.com" target="_blank">Visit</a></td></tr>
-<tr><td>56</td><td>Lumen5</td><td>Video</td><td>Yes</td><td><a class="button" href="https://lumen5.com" target="_blank">Visit</a></td></tr>
-<tr><td>57</td><td>Kapwing</td><td>Video</td><td>Yes</td><td><a class="button" href="https://www.kapwing.com" target="_blank">Visit</a></td></tr>
-<tr><td>58</td><td>ElevenLabs</td><td>Audio</td><td>Yes</td><td><a class="button" href="https://elevenlabs.io" target="_blank">Visit</a></td></tr>
-<tr><td>59</td><td>Murf</td><td>Audio</td><td>Yes</td><td><a class="button" href="https://murf.ai" target="_blank">Visit</a></td></tr>
-<tr><td>60</td><td>Krisp</td><td>Audio / Calls</td><td>Yes</td><td><a class="button" href="https://krisp.ai" target="_blank">Visit</a></td></tr>
-
-<tr><td>61</td><td>You.com</td><td>Search</td><td>Yes</td><td><a class="button" href="https://you.com" target="_blank">Visit</a></td></tr>
-<tr><td>62</td><td>Beautiful.ai</td><td>Presentations</td><td>Yes</td><td><a class="button" href="https://www.beautiful.ai" target="_blank">Visit</a></td></tr>
-<tr><td>63</td><td>Gamma</td><td>Presentations / Docs</td><td>Yes</td><td><a class="button" href="https://gamma.app" target="_blank">Visit</a></td></tr>
-<tr><td>64</td><td>Surfer</td><td>SEO</td><td>No</td><td><a class="button" href="https://surferseo.com" target="_blank">Visit</a></td></tr>
-<tr><td>65</td><td>Frase</td><td>SEO</td><td>No</td><td><a class="button" href="https://www.frase.io" target="_blank">Visit</a></td></tr>
-<tr><td>66</td><td>Lavender</td><td>Email / Sales</td><td>Yes</td><td><a class="button" href="https://www.lavender.ai" target="_blank">Visit</a></td></tr>
-<tr><td>67</td><td>Tableau Pulse</td><td>Analytics</td><td>No</td><td><a class="button" href="https://www.tableau.com" target="_blank">Visit</a></td></tr>
-<tr><td>68</td><td>Elicit</td><td>Research</td><td>Yes</td><td><a class="button" href="https://elicit.com" target="_blank">Visit</a></td></tr>
-<tr><td>69</td><td>Consensus</td><td>Research</td><td>Yes</td><td><a class="button" href="https://consensus.app" target="_blank">Visit</a></td></tr>
-<tr><td>70</td><td>ClickUp AI</td><td>Productivity</td><td>No</td><td><a class="button" href="https://clickup.com" target="_blank">Visit</a></td></tr>
-
-<tr><td>71</td><td>Asana AI</td><td>Productivity</td><td>No</td><td><a class="button" href="https://asana.com" target="_blank">Visit</a></td></tr>
-<tr><td>72</td><td>HubSpot AI</td><td>Marketing / CRM</td><td>Yes</td><td><a class="button" href="https://www.hubspot.com" target="_blank">Visit</a></td></tr>
-<tr><td>73</td><td>Intercom Fin</td><td>Support</td><td>No</td><td><a class="button" href="https://www.intercom.com" target="_blank">Visit</a></td></tr>
-<tr><td>74</td><td>Shopify Magic</td><td>Ecommerce</td><td>No</td><td><a class="button" href="https://www.shopify.com" target="_blank">Visit</a></td></tr>
-<tr><td>75</td><td>Buffer AI</td><td>Social Media</td><td>Yes</td><td><a class="button" href="https://buffer.com" target="_blank">Visit</a></td></tr>
-<tr><td>76</td><td>Hootsuite OwlyWriter</td><td>Social Media</td><td>No</td><td><a class="button" href="https://www.hootsuite.com" target="_blank">Visit</a></td></tr>
-<tr><td>77</td><td>Picsart AI</td><td>Images</td><td>Yes</td><td><a class="button" href="https://picsart.com" target="_blank">Visit</a></td></tr>
-<tr><td>78</td><td>Suno</td><td>Music</td><td>Yes</td><td><a class="button" href="https://suno.com" target="_blank">Visit</a></td></tr>
-<tr><td>79</td><td>Udio</td><td>Music</td><td>Yes</td><td><a class="button" href="https://www.udio.com" target="_blank">Visit</a></td></tr>
-<tr><td>80</td><td>Auphonic</td><td>Audio</td><td>Yes</td><td><a class="button" href="https://auphonic.com" target="_blank">Visit</a></td></tr>
-
-<tr><td>81</td><td>Podcastle</td><td>Audio</td><td>Yes</td><td><a class="button" href="https://podcastle.ai" target="_blank">Visit</a></td></tr>
-<tr><td>82</td><td>Character.AI</td><td>Chatbots</td><td>Yes</td><td><a class="button" href="https://character.ai" target="_blank">Visit</a></td></tr>
-<tr><td>83</td><td>Claude</td><td>General AI</td><td>Yes</td><td><a class="button" href="https://claude.ai" target="_blank">Visit</a></td></tr>
-<tr><td>84</td><td>Microsoft Copilot</td><td>General AI</td><td>Yes</td><td><a class="button" href="https://copilot.microsoft.com" target="_blank">Visit</a></td></tr>
-<tr><td>85</td><td>Slack AI</td><td>Productivity</td><td>No</td><td><a class="button" href="https://slack.com" target="_blank">Visit</a></td></tr>
-<tr><td>86</td><td>Zoom AI Companion</td><td>Meetings</td><td>No</td><td><a class="button" href="https://zoom.us" target="_blank">Visit</a></td></tr>
-<tr><td>87</td><td>Superhuman AI</td><td>Email</td><td>No</td><td><a class="button" href="https://superhuman.com" target="_blank">Visit</a></td></tr>
-<tr><td>88</td><td>Rows AI</td><td>Data</td><td>Yes</td><td><a class="button" href="https://rows.com" target="_blank">Visit</a></td></tr>
-<tr><td>89</td><td>Durable</td><td>Websites</td><td>No</td><td><a class="button" href="https://durable.co" target="_blank">Visit</a></td></tr>
-<tr><td>90</td><td>Wix AI</td><td>Websites</td><td>Yes</td><td><a class="button" href="https://www.wix.com" target="_blank">Visit</a></td></tr>
-
-<tr><td>91</td><td>Softr</td><td>Apps</td><td>Yes</td><td><a class="button" href="https://www.softr.io" target="_blank">Visit</a></td></tr>
-<tr><td>92</td><td>Figma AI</td><td>Design</td><td>No</td><td><a class="button" href="https://www.figma.com" target="_blank">Visit</a></td></tr>
-<tr><td>93</td><td>Polymer</td><td>Analytics</td><td>No</td><td><a class="button" href="https://www.polymersearch.com" target="_blank">Visit</a></td></tr>
-<tr><td>94</td><td>Glean</td><td>Enterprise Search</td><td>No</td><td><a class="button" href="https://www.glean.com" target="_blank">Visit</a></td></tr>
-<tr><td>95</td><td>Tidio AI</td><td>Support</td><td>Yes</td><td><a class="button" href="https://www.tidio.com" target="_blank">Visit</a></td></tr>
-<tr><td>96</td><td>Poe</td><td>General AI</td><td>Yes</td><td><a class="button" href="https://poe.com" target="_blank">Visit</a></td></tr>
-<tr><td>97</td><td>Speechify</td><td>Audio / Reading</td><td>Yes</td><td><a class="button" href="https://speechify.com" target="_blank">Visit</a></td></tr>
-<tr><td>98</td><td>Readwise Reader</td><td>Reading</td><td>No</td><td><a class="button" href="https://readwise.io" target="_blank">Visit</a></td></tr>
-<tr><td>99</td><td>Bardeen</td><td>Automation</td><td>Yes</td><td><a class="button" href="https://www.bardeen.ai" target="_blank">Visit</a></td></tr>
-<tr><td>100</td><td>Remove.bg</td><td>Images</td><td>Yes</td><td><a class="button" href="https://www.remove.bg" target="_blank">Visit</a></td></tr>
-
-</table>
-</div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <h3>100+</h3>
+        <p>AI tools to explore</p>
+      </div>
+      <div class="hero-stat">
+        <h3>5</h3>
+        <p>Main categories</p>
+      </div>
+      <div class="hero-stat">
+        <h3>∞</h3>
+        <p>Growth potential</p>
+      </div>
+      <div class="hero-stat">
+        <h3>24/7</h3>
+        <p>Available worldwide</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer>
-<p>© 2026 AI Tools Galaxy</p>
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Search the Galaxy</h2>
+    <p class="section-subtitle">Type what you need and jump instantly to the best matching category.</p>
+
+    <div class="search-panel">
+      <div class="search-box">
+        <input type="text" id="toolSearch" placeholder="Try: writing, students, image, productivity, tools...">
+        <button onclick="searchTools()">Search</button>
+      </div>
+      <div id="searchResults"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="featured">
+  <div class="container">
+    <h2 class="section-title">Featured Stars</h2>
+    <p class="section-subtitle">Start with the brightest tools in the galaxy — the ones people use every day.</p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-tag">Most Popular</div>
+        <div class="card-icon">🤖</div>
+        <h3>ChatGPT</h3>
+        <p>An all-purpose AI assistant for writing, brainstorming, learning, and productivity.</p>
+        <a class="button" href="https://chat.openai.com" target="_blank">Visit ChatGPT</a>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">Writing Power</div>
+        <div class="card-icon">✍️</div>
+        <h3>Grammarly</h3>
+        <p>Upgrade grammar, tone, and clarity with one of the best writing assistants online.</p>
+        <a class="button" href="https://www.grammarly.com" target="_blank">Visit Grammarly</a>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">Productivity</div>
+        <div class="card-icon">🧠</div>
+        <h3>Notion AI</h3>
+        <p>Organize notes, summarize ideas, and plan projects in a sleek AI workspace.</p>
+        <a class="button" href="https://www.notion.so" target="_blank">Visit Notion</a>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">Creative Design</div>
+        <div class="card-icon">🎨</div>
+        <h3>Canva AI</h3>
+        <p>Create social posts, presentations, visuals, and graphics with colorful ease.</p>
+        <a class="button" href="https://www.canva.com" target="_blank">Visit Canva</a>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">Image Magic</div>
+        <div class="card-icon">🪐</div>
+        <h3>Midjourney</h3>
+        <p>Generate breathtaking visuals and dreamy concept art from text prompts.</p>
+        <a class="button" href="https://www.midjourney.com" target="_blank">Visit Midjourney</a>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">Automation</div>
+        <div class="card-icon">⚡</div>
+        <h3>Zapier</h3>
+        <p>Connect your apps and automate the boring parts of work with AI-powered workflows.</p>
+        <a class="button" href="https://zapier.com" target="_blank">Visit Zapier</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Top 10 Cosmic Tools</h2>
+    <p class="section-subtitle">These are the tools users are most likely to love first.</p>
+
+    <div class="tools-grid">
+      <div class="tool-box"><h3>1. ChatGPT</h3><p>Writing, study, research, and productivity in one tool.</p></div>
+      <div class="tool-box"><h3>2. Grammarly</h3><p>Clearer writing, better grammar, and more confidence.</p></div>
+      <div class="tool-box"><h3>3. Notion AI</h3><p>Summaries, notes, planning, and idea organization.</p></div>
+      <div class="tool-box"><h3>4. Canva AI</h3><p>Fast visuals, presentations, thumbnails, and social graphics.</p></div>
+      <div class="tool-box"><h3>5. Midjourney</h3><p>Beautiful AI-generated imagery and concept art.</p></div>
+      <div class="tool-box"><h3>6. DALL·E</h3><p>Text-to-image generation for creative and practical work.</p></div>
+      <div class="tool-box"><h3>7. Quizlet</h3><p>Flashcards and study support for exam preparation.</p></div>
+      <div class="tool-box"><h3>8. Duolingo</h3><p>AI-enhanced language learning that stays fun.</p></div>
+      <div class="tool-box"><h3>9. Otter AI</h3><p>Meeting notes and transcription made easy.</p></div>
+      <div class="tool-box"><h3>10. ElevenLabs</h3><p>Premium AI voices for audio, narration, and content.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Travel by Category</h2>
+    <p class="section-subtitle">Choose your destination and explore the right kind of tool faster.</p>
+
+    <div class="category-grid">
+      <div class="category-card">
+        <h3>AI Writing Tools</h3>
+        <p>Essay tools, copywriting assistants, summarizers, and grammar improvers.</p>
+        <a class="button" href="ai-writing-tools.html">Open Page</a>
+      </div>
+
+      <div class="category-card">
+        <h3>AI Image Tools</h3>
+        <p>Image generators, design helpers, thumbnail makers, and creative visuals.</p>
+        <a class="button" href="ai-image-tools.html">Open Page</a>
+      </div>
+
+      <div class="category-card">
+        <h3>AI Productivity Tools</h3>
+        <p>Task automation, scheduling, notes, meetings, and workflow tools.</p>
+        <a class="button" href="ai-productivity-tools.html">Open Page</a>
+      </div>
+
+      <div class="category-card">
+        <h3>AI Tools for Students</h3>
+        <p>Study helpers, research assistants, learning tools, and exam support.</p>
+        <a class="button" href="ai-tools-for-students.html">Open Page</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Future Money Zone</h2>
+    <p class="section-subtitle">This part makes the site feel premium now — and later it can help you monetize traffic.</p>
+
+    <div class="highlight-wrap">
+      <div class="highlight-left">
+        <h3>Featured Tool Placement</h3>
+        <p>This glowing area can later hold affiliate recommendations, sponsored tools, promoted reviews, or premium editor picks once your traffic starts growing.</p>
+        <a class="button" href="100-ai-tools.html">Browse More Tools</a>
+      </div>
+
+      <div class="highlight-right">
+        <div class="highlight-mini">Premium Slot</div>
+        <h3>Top Recommended Tool</h3>
+        <p>Replace this card later with a real AI product recommendation and a monetized link.</p>
+        <a class="button" href="#">Coming Soon</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <h2 class="section-title">FAQ from Across the Galaxy</h2>
+    <p class="section-subtitle">A few answers visitors usually want before they keep exploring.</p>
+
+    <div class="faq">
+      <div class="faq-item">
+        <h3>What is AI Tools Galaxy?</h3>
+        <p>It is a colorful AI tools directory for discovering useful products for writing, learning, design, productivity, and automation.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Are these tools free?</h3>
+        <p>Many offer free plans, free trials, or limited free features, while some also have paid upgrades.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Who is this site for?</h3>
+        <p>Students, creators, freelancers, marketers, founders, and anyone who wants better tools for work or creativity.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can this site make money later?</h3>
+        <p>Yes. It can later earn from affiliate links, sponsored placements, ads, and promoted tool reviews.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 AI Tools Galaxy</p>
+  <p class="small">Discover, compare, and explore the brightest AI tools in the universe.</p>
 </footer>
+
+<script>
+function searchTools(){
+  const query = document.getElementById("toolSearch").value.toLowerCase().trim();
+  const results = document.getElementById("searchResults");
+
+  if(query.includes("writing") || query.includes("essay") || query.includes("grammar") || query.includes("copy")){
+    results.innerHTML = 'Best match: <a style="color:#ffd6f7;font-weight:bold;" href="ai-writing-tools.html">AI Writing Tools</a>';
+  }
+  else if(query.includes("student") || query.includes("study") || query.includes("homework") || query.includes("exam") || query.includes("learn")){
+    results.innerHTML = 'Best match: <a style="color:#c7fff0;font-weight:bold;" href="ai-tools-for-students.html">AI Tools for Students</a>';
+  }
+  else if(query.includes("image") || query.includes("art") || query.includes("design") || query.includes("thumbnail") || query.includes("visual")){
+    results.innerHTML = 'Best match: <a style="color:#cfe7ff;font-weight:bold;" href="ai-image-tools.html">AI Image Tools</a>';
+  }
+  else if(query.includes("productivity") || query.includes("task") || query.includes("notes") || query.includes("workflow") || query.includes("automation")){
+    results.innerHTML = 'Best match: <a style="color:#ffe6a8;font-weight:bold;" href="ai-productivity-tools.html">AI Productivity Tools</a>';
+  }
+  else if(query.includes("tools") || query.includes("list") || query.includes("directory") || query.includes("all")){
+    results.innerHTML = 'Best match: <a style="color:#ffd6f7;font-weight:bold;" href="100-ai-tools.html">100 AI Tools</a>';
+  }
+  else if(query.length > 0){
+    results.innerHTML = 'No exact match found. Try: writing, students, image, productivity, or tools.';
+  }
+  else{
+    results.innerHTML = 'Please enter a keyword first.';
+  }
+}
+</script>
 
 </body>
 </html>
