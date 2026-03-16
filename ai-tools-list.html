@@ -3,169 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Tools List</title>
+<title>AI Tools List | AI Tools Galaxy</title>
 
 <style>
+:root{
+  --bg1:#09081a;
+  --bg2:#11193a;
+  --bg3:#1b0f3f;
+  --bg4:#0e3b52;
+  --text:#ffffff;
+  --muted:rgba(255,255,255,0.8);
+  --border:rgba(255,255,255,0.12);
+  --pink:#ff4fd8;
+  --blue:#42c8ff;
+  --purple:#8b5dff;
+  --green:#59f0c2;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-font-family:Arial,sans-serif;
-background:#0f172a;
-color:white;
-margin:0;
+  font-family:Arial,sans-serif;
+  color:var(--text);
+  line-height:1.6;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,79,216,0.25), transparent 25%),
+    radial-gradient(circle at 85% 15%, rgba(66,200,255,0.22), transparent 24%),
+    radial-gradient(circle at 70% 75%, rgba(89,240,194,0.14), transparent 20%),
+    radial-gradient(circle at 28% 86%, rgba(139,93,255,0.22), transparent 22%),
+    linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3),var(--bg4));
+  background-attachment:fixed;
 }
 
-nav{
-display:flex;
-justify-content:center;
-gap:20px;
-padding:16px;
-background:#111827;
+a{text-decoration:none;color:inherit}
+
+.navbar{
+  position:sticky;top:0;z-index:1000;
+  backdrop-filter:blur(16px);
+  background:rgba(10,10,30,0.45);
+  border-bottom:1px solid var(--border);
 }
 
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
+.nav-inner{
+  max-width:1200px;margin:auto;padding:16px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
 }
 
-header{
-text-align:center;
-padding:60px 20px;
+.brand{
+  display:flex;align-items:center;gap:12px;font-weight:bold;font-size:20px;
 }
 
-header h1{
-font-size:44px;
-margin-bottom:10px;
+.brand-badge{
+  width:40px;height:40px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue));
+}
+
+.nav-links{
+  display:flex;gap:18px;flex-wrap:wrap;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,0.9);
+  font-size:14px;font-weight:bold;
+}
+
+.hero{
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+  padding:90px 20px 40px;
+}
+
+.hero-tag{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid var(--border);
+  color:#f8d9ff;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:56px;
+  line-height:1.02;
+  margin-bottom:16px;
+  letter-spacing:-1.5px;
+}
+
+.hero p{
+  max-width:760px;
+  margin:auto;
+  font-size:20px;
+  color:var(--muted);
+}
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:30px 20px 70px;
+}
+
+.table-shell{
+  background:rgba(255,255,255,0.08);
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:18px;
+}
+
+.table-wrap{
+  overflow-x:auto;
+  border-radius:22px;
 }
 
 table{
-width:90%;
-margin:auto;
-border-collapse:collapse;
-background:white;
-color:black;
+  width:100%;
+  min-width:760px;
+  border-collapse:collapse;
+  background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(246,250,255,0.96));
+  color:#111827;
 }
 
 th,td{
-padding:12px;
-border:1px solid #ddd;
-text-align:left;
+  padding:14px;
+  text-align:left;
+  border-bottom:1px solid #e8ebf1;
 }
 
 th{
-background:#2563eb;
-color:white;
+  background:linear-gradient(90deg,var(--pink),var(--purple),var(--blue));
+  color:white;
 }
 
 tr:nth-child(even){
-background:#f2f2f2;
+  background:#f8fbff;
+}
+
+tr:hover{
+  background:#eef8ff;
+}
+
+.badge{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:bold;
+  background:linear-gradient(135deg,#ffe1f8,#e2dbff,#dcf5ff);
+  color:#334155;
 }
 
 .button{
-background:#2563eb;
-color:white;
-padding:6px 10px;
-border-radius:6px;
-text-decoration:none;
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue));
+  color:white;
+  font-weight:bold;
 }
 
+.footer{
+  margin-top:30px;
+  padding:40px 20px;
+  text-align:center;
+  background:rgba(6,8,22,0.45);
+  border-top:1px solid var(--border);
+}
+
+.footer p{color:rgba(255,255,255,0.88)}
+
+@media (max-width:720px){
+  .hero h1{font-size:38px}
+  .hero p{font-size:18px}
+}
 </style>
 </head>
-
 <body>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="100-ai-tools.html">AI Tools</a>
-<a href="ai-writing-tools.html">Writing</a>
-<a href="ai-image-tools.html">Images</a>
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-badge">🌌</div>
+      <span>AI Tools Galaxy</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="100-ai-tools.html">100 AI Tools</a>
+      <a href="ai-tools-list.html">Tools List</a>
+      <a href="ai-writing-tools.html">Writing</a>
+      <a href="ai-image-tools.html">Images</a>
+      <a href="ai-productivity-tools.html">Productivity</a>
+      <a href="ai-tools-for-students.html">Students</a>
+    </div>
+  </div>
 </nav>
 
-<header>
-<h1>AI Tools List</h1>
-<p>A simple list of useful AI tools across writing, productivity, images and study.</p>
-</header>
+<section class="hero">
+  <div class="hero-tag">📚 Simple galaxy-style tool directory</div>
+  <h1>AI Tools List</h1>
+  <p>A clean list of useful AI tools across writing, study, design, productivity, and automation.</p>
+</section>
 
-<table>
+<section class="section">
+  <div class="table-shell">
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>Tool</th>
+          <th>Category</th>
+          <th>Free</th>
+          <th>Visit</th>
+        </tr>
 
-<tr>
-<th>Tool</th>
-<th>Category</th>
-<th>Free</th>
-<th>Visit</th>
-</tr>
+        <tr><td>ChatGPT</td><td><span class="badge">Writing / Study</span></td><td>Yes</td><td><a class="button" href="https://chat.openai.com" target="_blank">Open</a></td></tr>
+        <tr><td>Grammarly</td><td><span class="badge">Writing</span></td><td>Yes</td><td><a class="button" href="https://www.grammarly.com" target="_blank">Open</a></td></tr>
+        <tr><td>Notion AI</td><td><span class="badge">Productivity</span></td><td>Yes</td><td><a class="button" href="https://www.notion.so" target="_blank">Open</a></td></tr>
+        <tr><td>Canva AI</td><td><span class="badge">Images / Design</span></td><td>Yes</td><td><a class="button" href="https://www.canva.com" target="_blank">Open</a></td></tr>
+        <tr><td>Midjourney</td><td><span class="badge">Images</span></td><td>No</td><td><a class="button" href="https://www.midjourney.com" target="_blank">Open</a></td></tr>
+        <tr><td>Zapier</td><td><span class="badge">Automation</span></td><td>Yes</td><td><a class="button" href="https://zapier.com" target="_blank">Open</a></td></tr>
+        <tr><td>Otter AI</td><td><span class="badge">Productivity</span></td><td>Yes</td><td><a class="button" href="https://otter.ai" target="_blank">Open</a></td></tr>
+        <tr><td>Duolingo</td><td><span class="badge">Students</span></td><td>Yes</td><td><a class="button" href="https://www.duolingo.com" target="_blank">Open</a></td></tr>
+        <tr><td>Quizlet</td><td><span class="badge">Students</span></td><td>Yes</td><td><a class="button" href="https://quizlet.com" target="_blank">Open</a></td></tr>
+        <tr><td>Writesonic</td><td><span class="badge">Writing</span></td><td>Yes</td><td><a class="button" href="https://writesonic.com" target="_blank">Open</a></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
 
-<tr>
-<td>ChatGPT</td>
-<td>Writing / Study</td>
-<td>Yes</td>
-<td><a class="button" href="https://chat.openai.com">Open</a></td>
-</tr>
-
-<tr>
-<td>Grammarly</td>
-<td>Writing</td>
-<td>Yes</td>
-<td><a class="button" href="https://grammarly.com">Open</a></td>
-</tr>
-
-<tr>
-<td>Notion AI</td>
-<td>Productivity</td>
-<td>Yes</td>
-<td><a class="button" href="https://notion.so">Open</a></td>
-</tr>
-
-<tr>
-<td>Canva AI</td>
-<td>Images</td>
-<td>Yes</td>
-<td><a class="button" href="https://canva.com">Open</a></td>
-</tr>
-
-<tr>
-<td>Midjourney</td>
-<td>Images</td>
-<td>No</td>
-<td><a class="button" href="https://midjourney.com">Open</a></td>
-</tr>
-
-<tr>
-<td>Writesonic</td>
-<td>Writing</td>
-<td>Yes</td>
-<td><a class="button" href="https://writesonic.com">Open</a></td>
-</tr>
-
-<tr>
-<td>Jasper</td>
-<td>Writing</td>
-<td>No</td>
-<td><a class="button" href="https://jasper.ai">Open</a></td>
-</tr>
-
-<tr>
-<td>Zapier</td>
-<td>Automation</td>
-<td>Yes</td>
-<td><a class="button" href="https://zapier.com">Open</a></td>
-</tr>
-
-<tr>
-<td>Otter AI</td>
-<td>Productivity</td>
-<td>Yes</td>
-<td><a class="button" href="https://otter.ai">Open</a></td>
-</tr>
-
-<tr>
-<td>Duolingo</td>
-<td>Learning</td>
-<td>Yes</td>
-<td><a class="button" href="https://duolingo.com">Open</a></td>
-</tr>
-
-</table>
+<footer class="footer">
+  <p>© 2026 AI Tools Galaxy</p>
+</footer>
 
 </body>
 </html>
