@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://aitoolsgalaxy.github.io/ai-tools-site/</loc>
-<priority>1.0</priority>
 </url>
 
-</urlset>
+<url>
+<loc>https://aitoolsgalaxy.github.io/ai-tools-site/100-ai-tools.html</loc>
+</url>
+
+<url>
+<loc>https://aitoolsgalaxy.github.io/ai-tools-site/ai-tools-list.html</loc>
+</url>
+
+<url>
+<loc>https://aitoolsgalaxy.github.io/ai-tools-site/ai-writing-tools.html</loc>
+</url>
+
+<url>
+<loc>https://aitoolsgalaxy.github.io/ai-tools-site/ai-image-tools.html</loc>
+</url>
+
+<url>
+<loc>https://aitoolsgalaxy.github.io/ai-tools-site/ai-productivity-tools.html</loc>
+</url>
+
+<url>
+<loc>https://aitoolsgalaxy.github.io/ai-tools-site/ai-tools-for-students.html</loc>
+</url>
+
+</urlset>q
