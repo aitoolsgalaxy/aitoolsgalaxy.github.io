@@ -348,12 +348,6 @@
     gap: 20px;
   }
 
-  .grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-  }
-
   .card,
   .money-box,
   .faq-item {
@@ -400,7 +394,8 @@
     color: rgba(255,255,255,0.92);
   }
 
-  .money-box .tool-btn {
+  .money-box .tool-btn,
+  .card .tool-btn {
     display: inline-block;
     margin-top: 18px;
     padding: 12px 18px;
@@ -428,6 +423,14 @@
       rgba(255,255,255,0.08);
   }
 
+  .tool-list,
+  .how-grid,
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
   .pill-row {
     display: flex;
     flex-wrap: wrap;
@@ -444,12 +447,6 @@
     color: rgba(255,255,255,0.92);
     font-size: 14px;
     font-weight: 700;
-  }
-
-  .tool-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
   }
 
   .tool-card-title {
@@ -478,13 +475,6 @@
 
   .list-inline li {
     margin-bottom: 6px;
-  }
-
-  .how-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 10px;
   }
 
   .step-num {
@@ -544,8 +534,8 @@
     .money-grid,
     .tool-list,
     .grid-3,
-    .grid-4,
-    .how-grid {
+    .how-grid,
+    .featured-grid {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -580,8 +570,8 @@
     .money-grid,
     .tool-list,
     .grid-3,
-    .grid-4,
-    .how-grid {
+    .how-grid,
+    .featured-grid {
       grid-template-columns: 1fr;
     }
 
@@ -626,10 +616,10 @@
   <section class="hero container">
     <div class="hero-badge glass">🔥 100+ AI tools to save time and work faster</div>
 
-    <h1>Save Hours Every Day with the Best AI Tools 🚀</h1>
+    <h1>Stop wasting hours on homework ❌</h1>
 
     <p class="hero-sub">
-      Discover the best AI tools for students, writing, homework, design, and productivity — all in one place.
+      Use these AI tools to write essays faster, fix your grammar, make presentations, and save time every day.
     </p>
 
     <p class="hero-mini">
@@ -637,8 +627,8 @@
     </p>
 
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="#top-tools">🚀 Start Using AI Tools Now</a>
-      <a class="btn btn-secondary" href="#students">💡 Free Tools for Students</a>
+      <a class="btn btn-primary" href="#top-tools">👉 Start saving time now</a>
+      <a class="btn btn-secondary" href="#students">💡 Best tools for students</a>
     </div>
 
     <p class="hero-helper">👇 Click below to start saving time</p>
@@ -676,33 +666,115 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Struggling with this?</h2>
+      <p class="section-sub">
+        If this sounds familiar, you’re exactly in the right place.
+      </p>
+
+      <div class="grid-3">
+        <div class="card glass">
+          <h3>Writing essays takes too long</h3>
+          <p>You spend too much time starting, rewriting, and fixing grammar.</p>
+        </div>
+        <div class="card glass">
+          <h3>You don’t know which tools to use</h3>
+          <p>There are too many AI tools online and most of them are not actually useful.</p>
+        </div>
+        <div class="card glass">
+          <h3>Homework feels slow and stressful</h3>
+          <p>You want faster ways to research, summarize, and get things done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="top-tools" class="section">
     <div class="container">
-      <h2 class="section-title">🔥 Most Popular AI Tools</h2>
+      <h2 class="section-title">🔥 Best AI Tools to Start With</h2>
       <p class="section-sub">
-        Start with these if you want the fastest results.
+        Start with these first if you want the fastest results.
       </p>
 
       <div class="money-grid">
         <article class="money-box chatgpt glass">
-          <small>🤖 Must Have</small>
+          <small>🤖 Most Powerful</small>
           <h3>ChatGPT</h3>
-          <p>Get ideas, write faster, summarize text, and solve problems in seconds.</p>
-          <a class="tool-btn" href="https://chat.openai.com/" target="_blank" rel="noopener">Try ChatGPT</a>
-        </article>
-
-        <article class="money-box canva glass">
-          <small>🎨 Design Pick</small>
-          <h3>Canva</h3>
-          <p>Create social posts, school presentations, and visuals quickly, even as a beginner.</p>
-          <a class="tool-btn" href="https://www.canva.com/" target="_blank" rel="noopener">Try Canva</a>
+          <p>👉 Write essays, solve homework, brainstorm ideas, and get answers instantly.</p>
+          <a class="tool-btn" href="https://chat.openai.com/" target="_blank" rel="noopener">Start using ChatGPT</a>
         </article>
 
         <article class="money-box grammarly glass">
-          <small>✍️ Writing Pick</small>
+          <small>✍️ Fix Writing Fast</small>
           <h3>Grammarly</h3>
-          <p>Fix grammar, improve clarity, and make your writing sound better instantly.</p>
-          <a class="tool-btn" href="https://www.grammarly.com/" target="_blank" rel="noopener">Try Grammarly</a>
+          <p>👉 Instantly fix grammar, improve clarity, and make your writing better.</p>
+          <a class="tool-btn" href="https://www.grammarly.com/" target="_blank" rel="noopener">Fix your writing now</a>
+        </article>
+
+        <article class="money-box canva glass">
+          <small>🎨 Design in Minutes</small>
+          <h3>Canva</h3>
+          <p>👉 Create presentations, visuals, and designs fast, even as a beginner.</p>
+          <a class="tool-btn" href="https://www.canva.com/" target="_blank" rel="noopener">Start designing now</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">🚀 Start here (takes 2 minutes)</h2>
+      <p class="section-sub">
+        New here? Do this first.
+      </p>
+
+      <div class="how-grid">
+        <article class="card glass">
+          <div class="step-num">1</div>
+          <h3>Open ChatGPT</h3>
+          <p>Start with the easiest and most powerful tool first.</p>
+        </article>
+
+        <article class="card glass">
+          <div class="step-num">2</div>
+          <h3>Type your task</h3>
+          <p>Ask for help with homework, essays, summaries, or ideas.</p>
+        </article>
+
+        <article class="card glass">
+          <div class="step-num">3</div>
+          <h3>Save hours instantly</h3>
+          <p>Get faster results and stop wasting time doing everything manually.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="students" class="section">
+    <div class="container">
+      <h2 class="section-title">📚 Best AI Tools for Students</h2>
+      <p class="section-sub">
+        These are especially useful for school, homework, essays, and studying faster.
+      </p>
+
+      <div class="grid-3">
+        <article class="card glass">
+          <h3>ChatGPT</h3>
+          <p>Best for homework, answers, brainstorming, and essay help.</p>
+          <a class="tool-btn" href="https://chat.openai.com/" target="_blank" rel="noopener">Use now</a>
+        </article>
+
+        <article class="card glass">
+          <h3>Grammarly</h3>
+          <p>Perfect for fixing grammar and making essays sound better.</p>
+          <a class="tool-btn" href="https://www.grammarly.com/" target="_blank" rel="noopener">Use now</a>
+        </article>
+
+        <article class="card glass">
+          <h3>Canva</h3>
+          <p>Great for presentations, posters, slides, and school visuals.</p>
+          <a class="tool-btn" href="https://www.canva.com/" target="_blank" rel="noopener">Use now</a>
         </article>
       </div>
     </div>
@@ -736,9 +808,10 @@
             <li>Grammarly</li>
             <li>Notion AI</li>
           </ul>
+          <a class="tool-btn" href="ai-writing-tools.html">Explore tools</a>
         </article>
 
-        <article class="card glass" id="students">
+        <article class="card glass">
           <div class="tool-card-title">
             <h3>Student Tools</h3>
             <span class="tag">Fastest wins</span>
@@ -749,6 +822,7 @@
             <li>Canva</li>
             <li>Perplexity</li>
           </ul>
+          <a class="tool-btn" href="ai-tools-for-students.html">Explore tools</a>
         </article>
 
         <article class="card glass">
@@ -762,6 +836,7 @@
             <li>Image AI tools</li>
             <li>Presentation tools</li>
           </ul>
+          <a class="tool-btn" href="ai-image-tools.html">Explore tools</a>
         </article>
 
         <article class="card glass">
@@ -775,6 +850,7 @@
             <li>Task assistants</li>
             <li>Automation tools</li>
           </ul>
+          <a class="tool-btn" href="ai-tools-for-productivity.html">Explore tools</a>
         </article>
 
         <article class="card glass">
@@ -788,6 +864,7 @@
             <li>ChatGPT</li>
             <li>AI research tools</li>
           </ul>
+          <a class="tool-btn" href="best-ai-tools.html">Explore tools</a>
         </article>
 
         <article class="card glass">
@@ -801,6 +878,7 @@
             <li>Canva</li>
             <li>Grammarly</li>
           </ul>
+          <a class="tool-btn" href="free-ai-tools.html">Explore tools</a>
         </article>
       </div>
     </div>
@@ -813,52 +891,23 @@
         Explore more useful AI tool lists and categories.
       </p>
 
-      <div class="grid-3">
+      <div class="featured-grid">
         <article class="card glass">
           <h3>Best AI Tools</h3>
           <p>Explore the strongest all-around AI tools for writing, design, productivity and more.</p>
-          <p style="margin-top:14px;"><a class="tool-btn" href="best-ai-tools.html">Open page</a></p>
+          <a class="tool-btn" href="best-ai-tools.html">Open page</a>
         </article>
 
         <article class="card glass">
           <h3>Free AI Tools</h3>
           <p>Discover free AI tools for students, creators, and anyone wanting to save time.</p>
-          <p style="margin-top:14px;"><a class="tool-btn" href="free-ai-tools.html">Open page</a></p>
+          <a class="tool-btn" href="free-ai-tools.html">Open page</a>
         </article>
 
         <article class="card glass">
           <h3>AI Tools for Students</h3>
           <p>Find useful AI tools for homework, essays, summaries, and studying faster.</p>
-          <p style="margin-top:14px;"><a class="tool-btn" href="ai-tools-for-students.html">Open page</a></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">How to Use This Page</h2>
-      <p class="section-sub">
-        If you’re new, do this in order.
-      </p>
-
-      <div class="how-grid">
-        <article class="card glass">
-          <div class="step-num">1</div>
-          <h3>Pick a category</h3>
-          <p>Start with writing, students, design, or productivity depending on what you need most.</p>
-        </article>
-
-        <article class="card glass">
-          <div class="step-num">2</div>
-          <h3>Try the top tools first</h3>
-          <p>ChatGPT, Canva, and Grammarly are the easiest place to begin.</p>
-        </article>
-
-        <article class="card glass">
-          <div class="step-num">3</div>
-          <h3>Save time daily</h3>
-          <p>Use the tools that actually help and ignore the rest.</p>
+          <a class="tool-btn" href="ai-tools-for-students.html">Open page</a>
         </article>
       </div>
     </div>
