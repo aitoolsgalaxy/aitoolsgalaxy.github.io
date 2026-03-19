@@ -1,542 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Best Free AI Tools (2026) | AI Tools Galaxy</title>
-<meta name="description" content="Discover the best free AI tools for writing, studying, productivity, and design. Save time with free AI tools like ChatGPT, Canva, Grammarly, Notion AI, and Perplexity.">
-<meta name="keywords" content="free AI tools, best free AI tools, AI tools for students, free AI writing tools, free productivity AI tools, ChatGPT, Canva, Grammarly, Notion AI, Perplexity">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://aitoolsgalaxy.github.io/ai-tools-site/free-ai-tools.html">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Best Free AI Tools (2026) | AI Tools Galaxy">
-<meta property="og:description" content="Discover the best free AI tools for writing, studying, productivity, and design.">
-<meta property="og:url" content="https://aitoolsgalaxy.github.io/ai-tools-site/free-ai-tools.html">
-<meta property="og:site_name" content="AI Tools Galaxy">
-
-<style>
-:root{
-  --bg1:#09081a;
-  --bg2:#11193a;
-  --bg3:#1b0f3f;
-  --bg4:#0e3b52;
-  --text:#ffffff;
-  --muted:rgba(255,255,255,0.8);
-  --border:rgba(255,255,255,0.12);
-  --pink:#ff4fd8;
-  --blue:#42c8ff;
-  --purple:#8b5dff;
-  --green:#59f0c2;
-  --yellow:#ffd166;
-  --shadow:0 12px 40px rgba(84,69,255,0.22);
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-
-body{
-  font-family:Arial,sans-serif;
-  color:var(--text);
-  line-height:1.6;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(255,79,216,0.25), transparent 25%),
-    radial-gradient(circle at 85% 15%, rgba(66,200,255,0.22), transparent 24%),
-    radial-gradient(circle at 70% 75%, rgba(89,240,194,0.14), transparent 20%),
-    radial-gradient(circle at 28% 86%, rgba(139,93,255,0.22), transparent 22%),
-    linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3),var(--bg4));
-  background-attachment:fixed;
-  overflow-x:hidden;
-}
-
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  opacity:.45;
-  background-image:
-    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,.7), transparent),
-    radial-gradient(2px 2px at 140px 80px, rgba(255,255,255,.55), transparent),
-    radial-gradient(1.5px 1.5px at 260px 120px, rgba(255,255,255,.55), transparent),
-    radial-gradient(2px 2px at 420px 40px, rgba(255,255,255,.5), transparent),
-    radial-gradient(1.5px 1.5px at 560px 160px, rgba(255,255,255,.45), transparent),
-    radial-gradient(2px 2px at 760px 90px, rgba(255,255,255,.55), transparent);
-  background-size:900px 220px;
-}
-
-a{text-decoration:none;color:inherit}
-
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  backdrop-filter:blur(16px);
-  background:rgba(10,10,30,0.45);
-  border-bottom:1px solid var(--border);
-}
-
-.nav-inner{
-  max-width:1200px;
-  margin:auto;
-  padding:16px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-weight:bold;
-  font-size:20px;
-}
-
-.brand-badge{
-  width:40px;
-  height:40px;
-  border-radius:14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue));
-  box-shadow:0 10px 30px rgba(139,93,255,.35);
-}
-
-.nav-links{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-}
-
-.nav-links a{
-  color:rgba(255,255,255,0.9);
-  font-size:14px;
-  font-weight:bold;
-}
-
-.hero{
-  max-width:1100px;
-  margin:auto;
-  text-align:center;
-  padding:90px 20px 50px;
-}
-
-.hero-tag{
-  display:inline-block;
-  padding:10px 16px;
-  border-radius:999px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid var(--border);
-  color:#dcfff5;
-  font-size:14px;
-  margin-bottom:20px;
-}
-
-.hero h1{
-  font-size:56px;
-  margin-bottom:16px;
-  letter-spacing:-1.5px;
-}
-
-.hero p{
-  max-width:760px;
-  margin:auto;
-  font-size:20px;
-  color:var(--muted);
-}
-
-.hero-buttons{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-top:26px;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:14px 22px;
-  border-radius:14px;
-  font-weight:bold;
-  transition:.2s ease;
-}
-
-.btn:hover{transform:translateY(-2px)}
-
-.btn-primary{
-  background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue));
-  color:white;
-  box-shadow:0 14px 34px rgba(108,84,255,.35);
-}
-
-.btn-secondary{
-  background:rgba(255,255,255,0.08);
-  border:1px solid var(--border);
-  color:white;
-}
-
-.hero-proof{
-  margin-top:16px;
-  font-size:14px;
-  color:rgba(255,255,255,.78);
-}
-
-.section{
-  max-width:1200px;
-  margin:auto;
-  padding:30px 20px 70px;
-}
-
-.section-title{
-  text-align:center;
-  font-size:38px;
-  margin-bottom:12px;
-  letter-spacing:-1px;
-}
-
-.section-sub{
-  text-align:center;
-  max-width:760px;
-  margin:0 auto 28px;
-  color:var(--muted);
-  font-size:18px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:22px;
-}
-
-.card{
-  background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(246,250,255,0.96));
-  color:#111827;
-  padding:24px;
-  border-radius:24px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.28);
-  transition:.2s ease;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 24px 56px rgba(0,0,0,0.32);
-}
-
-.badge{
-  display:inline-block;
-  margin-bottom:14px;
-  padding:6px 11px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:bold;
-  background:linear-gradient(135deg,#fff2c9,#e2dbff,#dcf5ff);
-  color:#334155;
-}
-
-.card h3{
-  font-size:24px;
-  margin-bottom:10px;
-}
-
-.card p{
-  color:#4b5563;
-  margin-bottom:16px;
-}
-
-.button{
-  display:inline-block;
-  padding:10px 14px;
-  border-radius:10px;
-  background:linear-gradient(135deg,var(--yellow),var(--pink),var(--purple));
-  color:white;
-  font-weight:bold;
-}
-
-.info{
-  margin-top:28px;
-  padding:28px;
-  border-radius:24px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid var(--border);
-  backdrop-filter:blur(12px);
-}
-
-.info h2{
-  margin-bottom:10px;
-  font-size:30px;
-}
-
-.info p{
-  color:rgba(255,255,255,0.86);
-}
-
-.how-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:22px;
-  margin-top:10px;
-}
-
-.step-card{
-  padding:24px;
-  border-radius:24px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid var(--border);
-  backdrop-filter:blur(12px);
-  box-shadow:var(--shadow);
-}
-
-.step-number{
-  width:40px;
-  height:40px;
-  border-radius:999px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
-  margin-bottom:14px;
-  background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue));
-}
-
-.step-card h3{
-  margin-bottom:8px;
-  font-size:22px;
-}
-
-.step-card p{
-  color:rgba(255,255,255,0.84);
-}
-
-.faq{
-  display:grid;
-  gap:14px;
-  max-width:900px;
-  margin:auto;
-}
-
-.faq-item{
-  padding:22px;
-  border-radius:22px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid var(--border);
-  backdrop-filter:blur(12px);
-}
-
-.faq-item h3{
-  margin-bottom:8px;
-  font-size:20px;
-}
-
-.faq-item p{
-  color:rgba(255,255,255,0.84);
-}
-
-.disclaimer{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-  color:rgba(255,255,255,0.66);
-  font-size:13px;
-}
-
-.footer{
-  margin-top:30px;
-  padding:40px 20px;
-  text-align:center;
-  background:rgba(6,8,22,0.45);
-  border-top:1px solid var(--border);
-}
-
-.footer p{
-  color:rgba(255,255,255,0.88);
-}
-
-@media (max-width:720px){
-  .hero h1{font-size:38px}
-  .hero p{font-size:18px}
-}
-</style>
-</head>
-<body>
-
-<nav class="navbar">
-  <div class="nav-inner">
-    <div class="brand">
-      <div class="brand-badge">💸</div>
-      <span>AI Tools Galaxy</span>
-    </div>
-
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="100-ai-tools.html">100 AI Tools</a>
-      <a href="ai-tools-list.html">Tools List</a>
-      <a href="ai-writing-tools.html">Writing</a>
-      <a href="ai-image-tools.html">Images</a>
-      <a href="ai-productivity-tools.html">Productivity</a>
-      <a href="ai-tools-for-students.html">Students</a>
-    </div>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="hero-tag">💸 Save money and time with free tools</div>
-  <h1>Best Free AI Tools</h1>
-  <p>Discover the best free AI tools for writing, studying, productivity, design, and research — all in one place.</p>
-
-  <div class="hero-buttons">
-    <a class="btn btn-primary" href="#top-free-tools">🚀 Explore free tools</a>
-    <a class="btn btn-secondary" href="#faq">💡 See quick answers</a>
-  </div>
-
-  <p class="hero-proof">⭐ Start free • ⚡ Save time daily • 📚 Useful for students and creators</p>
-</section>
-
-<section class="section">
-  <h2 class="section-title">Why free AI tools matter</h2>
-  <p class="section-sub">You don’t need expensive software to start using AI. Free tools can already help with writing, studying, design, research, and everyday productivity.</p>
-
-  <div class="grid">
-    <div class="card">
-      <div class="badge">Free Start</div>
-      <h3>No big budget needed</h3>
-      <p>You can begin with free AI tools before paying for anything, which makes experimenting much easier.</p>
-    </div>
-
-    <div class="card">
-      <div class="badge">Productivity</div>
-      <h3>Save time daily</h3>
-      <p>Free AI tools can help you write faster, summarize information, and organize work more efficiently.</p>
-    </div>
-
-    <div class="card">
-      <div class="badge">Students</div>
-      <h3>Useful for learning</h3>
-      <p>Many free AI tools are helpful for homework, study notes, essays, presentations, and research.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="top-free-tools">
-  <h2 class="section-title">Top free AI tools to start with</h2>
-  <p class="section-sub">These are some of the easiest and most useful free AI tools right now.</p>
-
-  <div class="grid">
-    <div class="card">
-      <div class="badge">Writing & Ideas</div>
-      <h3>ChatGPT</h3>
-      <p>Free AI assistant for writing, learning, brainstorming, and everyday productivity.</p>
-      <a class="button" href="https://chat.openai.com" target="_blank" rel="noopener">Start with ChatGPT</a>
-    </div>
-
-    <div class="card">
-      <div class="badge">Design</div>
-      <h3>Canva</h3>
-      <p>Create designs, presentations, visuals, and social media graphics for free.</p>
-      <a class="button" href="https://www.canva.com" target="_blank" rel="noopener">Try Canva free</a>
-    </div>
-
-    <div class="card">
-      <div class="badge">Writing</div>
-      <h3>Grammarly</h3>
-      <p>Improve grammar, spelling, clarity, and writing confidence with a useful free version.</p>
-      <a class="button" href="https://www.grammarly.com" target="_blank" rel="noopener">Improve writing</a>
-    </div>
-
-    <div class="card">
-      <div class="badge">Productivity</div>
-      <h3>Notion AI</h3>
-      <p>Organize notes, tasks, and projects more effectively in one place.</p>
-      <a class="button" href="https://www.notion.so" target="_blank" rel="noopener">Visit Notion</a>
-    </div>
-
-    <div class="card">
-      <div class="badge">Research</div>
-      <h3>Perplexity AI</h3>
-      <p>AI search tool for fast answers, research help, and understanding topics more quickly.</p>
-      <a class="button" href="https://www.perplexity.ai" target="_blank" rel="noopener">Visit Perplexity</a>
-    </div>
-
-    <div class="card">
-      <div class="badge">Presentations</div>
-      <h3>Google Slides</h3>
-      <p>A free and easy tool for creating school presentations, visual notes, and teamwork projects.</p>
-      <a class="button" href="https://slides.google.com" target="_blank" rel="noopener">Visit Slides</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="section-title">How to start with free AI tools</h2>
-  <p class="section-sub">A simple way to begin without getting overwhelmed.</p>
-
-  <div class="how-grid">
-    <div class="step-card">
-      <div class="step-number">1</div>
-      <h3>Pick one task</h3>
-      <p>Start with one clear need, like homework, writing, research, or design.</p>
-    </div>
-
-    <div class="step-card">
-      <div class="step-number">2</div>
-      <h3>Choose one free tool</h3>
-      <p>Try ChatGPT for ideas, Grammarly for writing, or Canva for visuals and presentations.</p>
-    </div>
-
-    <div class="step-card">
-      <div class="step-number">3</div>
-      <h3>Use it every day</h3>
-      <p>The easiest way to benefit from AI is to use one good tool consistently.</p>
-    </div>
-  </div>
-
-  <div class="info">
-    <h2>Are free AI tools enough?</h2>
-    <p>For many people, yes. Free AI tools are often more than enough for everyday writing, study help, presentations, research, and productivity. Paid plans only become useful when you need more speed, features, or higher usage limits.</p>
-  </div>
-</section>
-
-<section class="section" id="faq">
-  <h2 class="section-title">FAQ</h2>
-  <p class="section-sub">Quick answers about free AI tools.</p>
-
-  <div class="faq">
-    <div class="faq-item">
-      <h3>Are these AI tools really free?</h3>
-      <p>Most of them offer free plans or free versions, although some also have paid upgrades.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Which free AI tool should I start with first?</h3>
-      <p>Start with ChatGPT for ideas and writing, Canva for design and presentations, or Grammarly for improving text.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Can free AI tools help students?</h3>
-      <p>Yes, they can be helpful for homework, essays, research, study notes, and presentations.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Do I need to pay to get value?</h3>
-      <p>No. Many people get a lot of value from free tools before ever needing a paid upgrade.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <p class="disclaimer">
-    Some links on this page may become affiliate links in the future, which means we may earn a commission at no extra cost to you.
-  </p>
-</section>
-
-<footer class="footer">
-  <p>© 2026 AI Tools Galaxy</p>
-</footer>
-
-</body>
-</html>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1094061510795147"
+    crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Best Free AI Tools (2026) | AI Tools Galaxy</title>
+  <meta name="description" content="Discover the best free AI tools for writing, studying, productivity, design, and research. Explore useful free tools like ChatGPT, Canva, Grammarly, Notion AI, and Perplexity.">
+  <meta name="keywords" content="free AI tools, best free AI tools, AI tools for students, free AI writing tools, free productivity AI tools, ChatGPT, Canva, Grammarly, Notion AI, Perplexity">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="AI Tools Galaxy">
+  <link rel="canonical" href="https://aitoolsgalaxy.github.io/free-ai-tools.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Best Free AI Tools (2026) | AI Tools Galaxy">
+  <meta property="og:description" content="Discover the best free AI tools for writing, studying, productivity, design, and research.">
+  <meta property="og:url" content="https://aitoolsgalaxy.github.io/free-ai-tools.html">
+  <meta property="og:site_name" content="AI Tools Galaxy">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Best Free AI Tools (2026) | AI Tools Galaxy">
+  <meta name="twitter:description" content="Discover the best free AI tools for writing, studying, productivity, design, and research.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Best Free AI Tools",
+    "url": "https://aitoolsgalaxy.github.io/free-ai-tools.html",
+    "description": "Discover the best free AI tools for writing, studying, productivity, design, and research."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-1: #090816;
+      --bg-2: #111b38;
+      --bg-3: #1a1140;
+      --bg-4: #0c3a4f;
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.82);
+      --soft: rgba(255, 255, 255, 0.12);
+      --soft-2: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.16);
+      --pink: #ff4fd8;
+      --purple: #8b5dff;
+      --blue: #42c8ff;
+      --yellow: #ffd166;
+      --shadow: 0 12px 40px rgba(84, 69, 255, 0.22);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 15%, rgba(255, 79, 216, 0.20), transparent 22%),
+        radial-gradient(circle at 88% 15%, rgba(66, 200, 255, 0.20), transparent 24%),
+        radial-gradient(circle at 75% 80%, rgba(139, 93, 255, 0.14), transparent 20%),
+        radial-gradient(circle at 20% 85%, rgba(66, 200, 255, 0.12), transparent 20%),
+        linear-gradient(135deg, var(--bg-1), var(--bg-2), var(--bg-3), var(--bg-4));
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.35;
+      background-image:
+        radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,.75), transparent),
+        radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,.55), transparent),
+        radial-gradient(1.5px 1.5px at 260px 130px, rgba(255,255,255,.55), transparent),
+        radial-gradient(2px 2px at 420px 35px, rgba(255,255,255,.45), transparent);
+      background-size: 900px 220px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .glass {
+      background: var(--soft-2);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 11, 28, 0.60);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--soft);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+      box-shadow: 0 10px 30px rgba(139, 93, 255, 0.35);
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .brand-text {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-weight: 700;
+      font-size: 15px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .nav-links a:hover,
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 78px 0 42px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--border);
+      color: #dcfff5;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      margin: 0 auto 18px;
+      max-width: 920px;
+      font-size: clamp(40px,
